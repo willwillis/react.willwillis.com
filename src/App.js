@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Typography, Avatar, List, Card, Space, Divider, Row, Col } from 'antd';
+import { Layout, Typography, Avatar, List, Space, Divider, Row, Col } from 'antd';
 import { CheckCircleTwoTone, ClockCircleOutlined } from '@ant-design/icons';
 
 const { Content } = Layout;
@@ -11,14 +11,6 @@ function App() {
     { title: "Laravel v CakePHP for small projects", status: "completed" },
     { title: "Running Python Flask in a shared hosting environment", status: "completed" },
     { title: "Running React in shared hosting environment", status: "inProgress" },
-  ];
-
-  const projects = [
-    {
-      title: "Storing Data in the Browser",
-      description: "Experiment with JavaScript Service Workers and Local Cache Storage",
-      date: "October 2024",
-    },
   ];
 
   return (
