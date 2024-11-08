@@ -36,8 +36,8 @@ function App() {
         </Row>
         <Row justify="center">
           <Col>
-            <Title level={2}>React &amp; Ant Design</Title>
-            <Text type="secondary">Just kicking the tires.</Text>
+            <Title level={2}>React &amp; Ant Design on Shared Hosting!🫶</Title>
+            <Text type="secondary">Just kicking the tires with different design frameowrks.</Text>
           </Col>
         </Row>
 
