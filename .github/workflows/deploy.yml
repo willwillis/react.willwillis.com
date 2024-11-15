@@ -1,4 +1,4 @@
-name: Build and Deploy to FTP
+name: Build Website and Deploy via FTP
 
 on:
   push:
