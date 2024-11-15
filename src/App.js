@@ -11,7 +11,7 @@ import {
   Image,
 } from "antd";
 
-import { CheckCircleTwoTone, ClockCircleOutlined } from "@ant-design/icons";
+import { CheckCircleTwoTone, ClockCircleOutlined, JavaScriptOutlined} from "@ant-design/icons";
 import CodeBlock from "./components/CodeBlock";
 import {
   GithubOutlined,
@@ -31,6 +31,10 @@ function App() {
     {
       title:
         "Literally every web feature you could ever image is availabel in JS/React",
+      status: "completed",
+    }, {
+      title:
+        "If you've made it this far, I don't need to give you any more examples",
       status: "completed",
     },
   ];
@@ -206,7 +210,7 @@ function App() {
         <Paragraph>
           I just can't deny any longer how much functionality, features like
           responsiveness, and general <b>pizzazz</b> to be had with little to no
-          effort. Like what, you ask? For starters...
+          effort using <JavaScriptOutlined />. Like what, you ask? For starters...
         </Paragraph>
 
         <List
