@@ -15,12 +15,12 @@ function App() {
     { title: "Running React in shared hosting environment", status: "inProgress" },
   ];
 
-  const infraAndComponents = [
-    { title: "Local Development Environment", url: "", description: ""},
-    { title: "GitHub Repository", url: "", description: ""},
-    { title: "GitHub Actions", url: "", description: ""},
-    { title: "Shared Hosting Account", url: "https://namecrane.com/", description: ""}
-  ];
+  // const infraAndComponents = [
+  //   { title: "Local Development Environment", url: "", description: ""},
+  //   { title: "GitHub Repository", url: "", description: ""},
+  //   { title: "GitHub Actions", url: "", description: ""},
+  //   { title: "Shared Hosting Account", url: "https://namecrane.com/", description: ""}
+  // ];
 
   const serverCode = `
   const express = require('express');
@@ -95,7 +95,17 @@ function App() {
           Host your code at Github. If you don't know about <pre>git</pre> or version control, start here (link)
         </Paragraph>
         <Paragraph>
-          
+          GitHub not only provides version control, but "Actions". They let you run/build code on their servers... FOR FREE! And yes, 
+          you could even host the site at github <a href="https://pages.github.com/">pages</a> without
+          having to pay for shared hosting, or lease domain name. I have a very simple 
+          <a href="https://github.com/willwillis/react.willwillis.com/blob/main/.github/workflows/deploy.yml">deploy workflow</a>
+           that does the following:
+           
+           <ol>
+            <li>Watches for code commits on the <pre>main</pre> branch</li>
+            <li>When triggered, the actions build the React application, resulting in some HTML and JavaScript being generated.</li>
+            <li>Lastly, the actions transfer those files from the github server to my shared hosting server over FTP.</li>
+            </ol>
         </Paragraph>
 
       
