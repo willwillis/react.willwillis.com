@@ -67,7 +67,7 @@ function App() {
           I've been nostalgic for the old and "easy" web for a few years now. Don't get me wrong, websites today are impressively useable, responsive and beautiful. But they're also complicated. Some might argue, overly complicated if you're developing a simple/personal web site.
         </Paragraph>
         <Paragraph>
-          placeholder, explain why complicated
+          placeholder, explain why complicated 
         </Paragraph>
         <Paragraph>
           Also, cloud hosting can get expensive quickly. I know, I know, before you call me out... 
