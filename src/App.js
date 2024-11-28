@@ -9,19 +9,19 @@ import {
   Row,
   Col,
   Image,
+  Grid,
 } from "antd";
 
-import { CheckCircleTwoTone, ClockCircleOutlined, JavaScriptOutlined} from "@ant-design/icons";
+import { CheckCircleTwoTone, ClockCircleOutlined, JavaScriptOutlined } from "@ant-design/icons";
 import CodeBlock from "./components/CodeBlock";
-import {
-  GithubOutlined,
-  AmazonOutlined,
-  HeartOutlined,
-} from "@ant-design/icons";
+import { GithubOutlined, AmazonOutlined, HeartOutlined } from "@ant-design/icons";
+
 const { Content, Footer } = Layout;
 const { Title, Text, Paragraph } = Typography;
+const { useBreakpoint } = Grid;
 
 function App() {
+  const screens = useBreakpoint();
   const sideQuests = [
     {
       title: "Plug-and-play design systems like Ant Design",
@@ -30,21 +30,15 @@ function App() {
     { title: "Syntax highlighting", status: "completed" },
     {
       title:
-        "Literally every web feature you could ever image is availabel in JS/React",
+        "Literally every web feature you could ever imagine is available in JS/React",
       status: "completed",
-    }, {
+    },
+    {
       title:
         "If you've made it this far, I don't need to give you any more examples",
       status: "completed",
     },
   ];
-
-  // const infraAndComponents = [
-  //   { title: "Local Development Environment", url: "", description: ""},
-  //   { title: "GitHub Repository", url: "", description: ""},
-  //   { title: "GitHub Actions", url: "", description: ""},
-  //   { title: "Shared Hosting Account", url: "https://namecrane.com/", description: ""}
-  // ];
 
   const serverCode = `
   const express = require('express');
@@ -68,30 +62,31 @@ function App() {
 
   return (
     <Layout style={{ minHeight: "100vh", backgroundColor: "#f5f5f5" }}>
-      <Content style={{ maxWidth: "800px", margin: "0 auto", padding: "40px" }}>
+      <Content style={{ maxWidth: "1000px", margin: "0 auto", padding: screens.xs ? "20px" : "40px" }}>
         {/* Profile Section */}
-        <Row justify="center">
+        <Row justify="center" gutter={[16, 16]}>
           <Col>
             <Avatar
-              size={120}
-              src="https://willwillis.com/assets/images/simpsons-me.webp" // Replace with your avatar URL
+              size={screens.xs ? 80 : 120}
+              src="https://willwillis.com/assets/images/simpsons-me.webp"
               style={{ marginBottom: "20px" }}
             />
           </Col>
         </Row>
-        <Row justify="center">
+        <Row justify="center" gutter={[16, 16]}>
           <Col>
-            <Title level={1}>⚛ React on Shared Hosting ⚛</Title>
+            <Title level={screens.xs ? 2 : 1}>⚛ React on Shared Hosting ⚛</Title>
             <Text type="secondary">New web meets nostalgic web.</Text>
           </Col>
         </Row>
 
-        <Row justify="center" align="middle" style={{ margin: "2em" }}>
-          <Col>
+        <Row justify="center" align="middle" gutter={[16, 16]}>
+          <Col span={24} md={12}>
             <Image
               src="/gtp-server-room.jpg"
               preview={false}
               alt="illustration of a server room"
+              style={{ width: "100%" }}
             />
           </Col>
         </Row>
@@ -100,7 +95,7 @@ function App() {
         <Title level={2}>My Motivation</Title>
         <Paragraph>
           I've been nostalgic for the old and "easy" web for a few years now.
-          Don't get me wrong, websites today are impressively useable,
+          Don't get me wrong, websites today are impressively usable,
           responsive and beautiful. But they're also complicated. Some might
           argue, overly complicated if you're developing a simple/personal web
           site.
@@ -169,23 +164,23 @@ function App() {
             </li>
           </ol>
         </Paragraph>
-        <Title level={3}>cPanel / Shared Hosting Configration</Title>
+        <Title level={3}>cPanel / Shared Hosting Configuration</Title>
         <Paragraph>
           With the files on the shared server, we're ready to umm, "serve" the
           application. In the <a href="https://cpanel.net">cPanel</a> dashboard,
           click on the <code>Setup Node.js App</code> link.
-          <Row justify="center" align="middle" style={{ margin: "2em" }}>
-            <Col>
-              <Image src="/cpanel-setup-node-app.png" />
+          <Row justify="center" align="middle" gutter={[16, 16]}>
+            <Col span={24} md={12}>
+              <Image src="/cpanel-setup-node-app.png" style={{ width: "100%" }} />
             </Col>
           </Row>
           You'll then be presented with a simple form where you can specify
           where on the file system the application will live (application root).
           How you'd like people to find your react app (URL), and the name of
           the startup file.
-          <Row justify="center" align="middle" style={{ margin: "2em" }}>
-            <Col>
-              <Image src="/cpanel-create-node-app-form.png" />
+          <Row justify="center" align="middle" gutter={[16, 16]}>
+            <Col span={24} md={12}>
+              <Image src="/cpanel-create-node-app-form.png" style={{ width: "100%" }} />
             </Col>
           </Row>
           Notice we're setting up a "Node.js" app, not a "React" app. In simple
@@ -204,7 +199,7 @@ function App() {
         <Paragraph>
           I may be coming around to the idea of using React for simple/personal
           websites. I've built dashboard apps for work using Next.js/React,
-          GraphQL, etc... but that makes sense, cuz COPRORATE, right?
+          GraphQL, etc... but that makes sense, cuz CORPORATE, right?
         </Paragraph>
 
         <Paragraph>
@@ -261,7 +256,7 @@ function App() {
               doing.
             </li>
             <li>
-              Break sections or other features wich repeat themselves (I'm
+              Break sections or other features which repeat themselves (I'm
               looking at you <code>Image</code>) into proper components
             </li>
             <li>
