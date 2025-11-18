@@ -13,7 +13,7 @@ import {
 } from "antd";
 
 import { CheckCircleTwoTone, ClockCircleOutlined, JavaScriptOutlined } from "@ant-design/icons";
-import CodeBlock from "./components/CodeBlock";
+import CodeBlock from "./components/CodeBlock.jsx";
 import { GithubOutlined, AmazonOutlined, HeartOutlined } from "@ant-design/icons";
 
 const { Content, Footer } = Layout;
