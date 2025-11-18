@@ -75,7 +75,7 @@ function App() {
         </Row>
         <Row justify="center" gutter={[16, 16]}>
           <Col>
-            <Title level={screens.xs ? 2 : 1}>⚛ React on Shared Hosting ⚛</Title>
+            <Title level={screens.xs ? 2 : 1}>⚛ Node.js on Shared Hosting ⚛</Title>
             <Text type="secondary">New web meets nostalgic web.</Text>
           </Col>
         </Row>
